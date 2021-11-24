@@ -1,4 +1,4 @@
-module.exports = [
+const Questions = [
     {
         question: "Which of these is not offered to standard clients of an Online Broker?",
         ansList: [
@@ -25,7 +25,7 @@ module.exports = [
             "Large or Mid-Cap Stocks",
             "Bonds",
             "Options",
-            "Large or Mid-Cap Stocks"
+            "Risky Small-Cap Stocks"
         ],
        ans: "Large or Mid-Cap Stocks"
     },
@@ -69,3 +69,7 @@ module.exports = [
        ans: "Diversification"
     }
 ]
+
+module.exports = {
+    Questions
+}
