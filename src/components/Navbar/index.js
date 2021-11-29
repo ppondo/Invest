@@ -1,19 +1,20 @@
 import React from 'react'
-import {Nav, NavLink, Bars, NavMenu} from './NavbarElements'
+import {Nav, NavLink, NavMenu} from './NavbarElements'
+import logo from '../../images/logo.svg'
 const Navbar = () => {
     return (
         <>
         <Nav>
             <NavLink to="/">
-                <h1>Logo</h1>
+                <img src={logo} alt='logo' width="180" height="180" />
             </NavLink> 
-            <Bars />
+            
             <NavMenu>
                 <NavLink to="/about" activeStyle>
-                    About Us   
+                    <h3>About Us</h3>   
                 </NavLink>    
                 <NavLink to="/quiz" activeStyle>
-                    Quiz   
+                    <h3>Quiz</h3>   
                 </NavLink>
             </NavMenu> 
         </Nav>
