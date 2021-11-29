@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Home from './pages'
 import About from './pages/about'
-import Quiz from './pages/quiz'
+import { QuizQuestion } from './components/QuizQuestion';
 function App() {
   return (
     <Router>
@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" exact element={<Home/>} />
         <Route path="/about" exact element={<About/>} />
-        <Route path="/quiz" exact element={<Quiz/>} />
+        <Route path="/quiz" exact element={<QuizQuestion/>} />
       </Routes>
     </Router>
   );
