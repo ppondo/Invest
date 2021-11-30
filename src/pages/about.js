@@ -1,4 +1,6 @@
 import React from 'react'
+import Testimonials from '../components/Testimonials'
+
 
 const About = () => {
     return (
@@ -9,6 +11,7 @@ const About = () => {
                 height: '90vh'
             }}>
           <h1>About</h1>  
+          <Testimonials />
         </div>
     )
 }
