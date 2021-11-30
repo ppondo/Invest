@@ -5,11 +5,12 @@ import {FaBars} from "react-icons/fa"
 export const Nav = styled.nav`
   background: #fff;
   height: 70px;
+  padding: 3px;
+  padding-right: 2%;
+  padding-left: 2%;
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem calc((100vw - 1000px) / 2);
   z-index: 10;
-  border-bottom: 2px solid black;
   /* Third Nav */
   /* justify-content: flex-start; */
 `;
@@ -47,7 +48,6 @@ export const Bars = styled(FaBars)`
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;
-  margin-right: -24px;
   /* Second Nav */
   /* margin-right: 24px; */
   /* Third Nav */
