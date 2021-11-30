@@ -1,6 +1,9 @@
 import React, { Component } from "react"; 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel'; 
+import erika from '../images/stockPhotos/erika.jpg'
+import chris from '../images/stockPhotos/chris.jpg'
+import mike from '../images/stockPhotos/mike.jpg'
 
 export default class Testimonials extends Component {
     render() {
@@ -14,7 +17,7 @@ export default class Testimonials extends Component {
                 interval={6100}>
 
                 <div>
-                <img src = "/images/stockPhotos/erika.jpg" />
+                <img src = {erika} />
                 <div className = "myCarousel">
                     <h3>Erika</h3>
                     <h4>21</h4>
@@ -29,7 +32,7 @@ export default class Testimonials extends Component {
 
 
                 <div>
-                <img src="/images/stockPhotos/chris.jpg" />
+                <img src={chris} />
                 <div className = "myCarousel">
                     <h3>Chris</h3>
                     <h4>19</h4>
@@ -43,7 +46,7 @@ export default class Testimonials extends Component {
                 </div>
 
                 <div>
-                <img src="/images/stockPhotos/mike.jpg" />
+                <img src={mike} />
                 <div className = "myCarousel">
                     <h3>Mike</h3>
                     <h4>23</h4>
