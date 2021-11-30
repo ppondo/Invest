@@ -1,6 +1,6 @@
 import React from 'react'
-
-const Home = () => {
+import Home from "../components/Home"
+const Index = () => {
     return (
         <div style={
             {   display: 'flex',
@@ -8,9 +8,9 @@ const Home = () => {
                 alignItems: 'center', 
                 height: '90vh'
             }}>
-          <h1>Home</h1> 
+                <Home />
         </div>
     )
 }
 
-export default Home
+export default Index

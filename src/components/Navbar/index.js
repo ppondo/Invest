@@ -9,13 +9,13 @@ const Navbar = () => {
                 <img src={logo} alt='logo' width="180" height="180" />
             </NavLink> 
             
-            <NavMenu>
-                <NavLink to="/about" activeStyle>
-                    <h3>About Us</h3>   
-                </NavLink>    
+            <NavMenu>   
                 <NavLink to="/quiz" activeStyle>
                     <h3>Quiz</h3>   
                 </NavLink>
+                <NavLink to="/about" activeStyle>
+                    <h3>Reviews</h3>   
+                </NavLink> 
             </NavMenu> 
         </Nav>
         </>

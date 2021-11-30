@@ -9,7 +9,7 @@ export const Result = (props) => {
       <p>Result: Average, You did pretty well.</p>
       <br />
       <a href="https://forms.gle/RwrKiBnofKtrAnfR7">
-        Click here to take a servey with us
+        Click here to take a survey with us
       </a>
       <h2>Generation wise investment</h2>
       <img
