@@ -8,7 +8,7 @@ const Home = () => {
                 alignItems: 'center', 
                 height: '90vh'
             }}>
-          <h1>Home</h1>  
+          <h1>Home</h1> 
         </div>
     )
 }
