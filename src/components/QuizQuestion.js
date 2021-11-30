@@ -1,12 +1,14 @@
 import { Questions } from "../QuizModel";
 import React from "react";
+import {useNavigate} from "react-router-dom";
 
 export const QuizQuestion = (props) => {
     const [currentPage, setCurrentPage] = React.useState(0);
     const [result, setResult] = React.useState(0);
     const [correct, setCorrect] = React.useState("");  
     const [currentAnswer, setCurrentAnswer] = React.useState(null);
-    const questions = Questions
+    const questions = Questions;
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -16,6 +18,10 @@ export const QuizQuestion = (props) => {
             setResult(result + 1);
         } else {
             setCorrect(`Close! The correct answer is ${questions[currentPage].ans}`);
+        }
+        setTimeout(2000);
+        if (currentPage === 6) {
+            navigate('/result')
         }
     }
 
