@@ -22,17 +22,6 @@ function Home() {
       </Grid>
     </Grid>
     </Container>
-
-    {/* <div className = "container">
-      <div className = "intro">
-        <h1 className = "title">How to Invest</h1>
-        <p className = "about">Investing in the stock market is easier than beginners might thing _ all you need is an online brokerage account to get started.</p>
-        <a href = "#Learn"><button type = "button" className = "button">Learn More</button></a>
-      </div>
-      <div className = "image">
-        <img src = {image} className = "graphic"></img>
-      </div>
-    </div> */}
   </Wrapper>
       )
 }
