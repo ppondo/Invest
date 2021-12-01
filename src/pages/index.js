@@ -1,14 +1,11 @@
 import React from 'react'
 import Home from "../components/Home"
+import Learn from "../components/Learn"
 const Index = () => {
     return (
-        <div style={
-            {   display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center', 
-                height: '90vh'
-            }}>
+        <div >
                 <Home />
+                <Learn />
         </div>
     )
 }

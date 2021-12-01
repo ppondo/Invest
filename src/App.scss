@@ -37,7 +37,13 @@
   }
 }
 
-
+.color {
+  color: #1976d2;
+  font-weight: bold;
+}
+.header {
+  font-weight: bold;
+}
 /* css for testimonials */
 
 .carousel-root {
@@ -168,8 +174,7 @@
     width: 24% !important;
     border-radius: 50%;
   }
-}
-
+  
 div .review_testimonial {
   text-align: center;
 }
