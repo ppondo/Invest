@@ -1,5 +1,9 @@
 import React, { useContext } from "react";
 import {ResultContext} from "./ResultContext";
+import image from "../images/flat-bravo-hands-clapping-vector.jpg"
+import image2 from "../images/study.jpg"
+import image3 from "../images/nicejob.png"
+import { Link, Box, Card, Button, CardContent, Typography } from '@mui/material';
 
 export const Result = (props) => {
   // const [result, setResult] = React.useState(0);
@@ -7,29 +11,47 @@ export const Result = (props) => {
   const resultPercentage = (
     score / 7
   );
-  let resultStatement;
+  let resultStatement = ""
   if (resultPercentage >= 6/7) {
-    resultStatement = " Super score! Well Done, You're practically an expert!!"
+    resultStatement = 
+    <>
+      <p className = "success2">Super score! Well Done, You're practically an expert!!</p>
+      <div className = "image">
+        <img src = {image} className = "success-image"></img>
+      </div>
+   </>
   } else if (resultPercentage <= 3/7) {
-    resultStatement = " Keep studying up and you'll become a great investor soon!"
+    resultStatement =
+    <>
+      <p className = "error2">Keep studying up and you'll become a great investor soon!</p>    
+      <div className = "image">
+        <img src = {image2} className = "success-image"></img>
+      </div>
+    </>
   } else {
-    resultStatement = " You did well! You're well on your way to becoming an expert"
+    resultStatement = 
+    <>
+    <p className = "success2">You did well! You're well on your way to becoming an expert</p>
+      <div className = "image">
+        <img src = {image3} className = "success-image"></img>
+      </div>
+    </>
   }
 
   return (
-    <div>
+    <div className = "results">
       <h1>Your Score: {Math.floor(resultPercentage * 100)}%</h1>
-      <p>{resultStatement}</p>
-      <br />
-      <a href="https://forms.gle/RwrKiBnofKtrAnfR7">
-        Click here to take a survey with us
-      </a>
-      <h2>Generation wise investment</h2>
+      {resultStatement}
+      <p>Thank you for taking our quiz and visiting our site! We hope you learned something new about investing in the stock market.</p>
+      <Link mb={10} style={{fontWeight:"bold"}}  href="https://forms.gle/RwrKiBnofKtrAnfR7">
+        Click here to give us a review
+      </Link>
+      {/* <h2>Generation wise investment</h2>
       <img
         src="/investment_by_gen.png"
         alt="Investment interest by generation"
-      />
-      <p>
+      /> */}
+      {/* <p>
         HAVING BEEN born into the most prosperous period in human history,
         today’s youngsters have much to hope for. But they have much to fear as
         well. On top of an inherited climate crisis, the young will have to
@@ -61,7 +83,7 @@ export const Result = (props) => {
         prove too pessimistic, but perhaps not dramatically so. The authors
         concede that a serious bout of deflation could drive up bond returns.
         But currently inflation, not deflation, is the worry.
-      </p>
+      </p> */}
     </div>
   );
 };

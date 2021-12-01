@@ -181,7 +181,66 @@ div .review_testimonial {
 }
 
 div .test_text {
+  margin-top: 1%;
   text-align: center;
   padding-left: 200px;
   padding-right: 200px;
+}
+
+.inputs {
+  margin-left: 2%;
+  margin-bottom: 3%
+}
+
+.quiz{
+  margin-left: 4%;
+}
+
+.question{
+  color: #1976d2;
+  font-weight: bold;
+}
+
+#question{
+  margin-left: 6%
+}
+
+.success{
+  margin-left: 6%;
+  font-weight: bold;
+  color: green
+}
+
+.error{
+  margin-left: 6%;
+  font-weight: bold;
+  color: red
+}
+
+.success2{
+  color: green;
+
+}
+
+.error2{
+
+  color: red;
+
+}
+
+.results {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
+.success-image{
+  width: 400px;
+  height: 400px;
+}
+
+.link{
+  text-align: center;
+  margin-bottom: 2%;
 }

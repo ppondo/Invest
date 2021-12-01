@@ -24,9 +24,6 @@ export default function Learn() {
           Investing is defined as the act of committing capital to an endeavor with the expectation of obtaining an additional profit. Investing in the stock market is the most common way for beginners to gain investment experience.
         </Typography>
       </CardContent>
-      {/* <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions> */}
     </Card>
       </Grid>
       <Grid item xs={4}>
@@ -51,9 +48,6 @@ export default function Learn() {
           Create a brokerage account and figure out what type of investor you are! Some investors want to take an active hand in managing their money's growth, and some prefer to "set it and forget it."
         </Typography>
       </CardContent>
-      {/* <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions> */}
     </Card>
       </Grid>
     </Grid>
@@ -145,10 +139,13 @@ export default function Learn() {
     </Grid>
     </Grid>
     </Box>
-    <Box sx={{mt:10, ml:7, mb: 10}}>
-      <h1 className = "title">Test your Knowledge!</h1>
-      <p className = "about">Now that you know more about investing take this quick quiz to see how much you remember.</p>
-      <Button href = "/quiz" variant="contained">Take Quiz</Button>
+    <Box sx={{mt:10, ml:7}}>
+    <h1 className = "title2">Test your Knowledge!</h1>
+      <p className = "about2">Now that you know more about investing take this quick quiz to see how much you remember.</p>
+      </Box>
+    <Box sx={{ ml:7, mb: 10}} justifyContent="center" style={{display:'flex', justifyContent:'center', alignItems:"center"}}className = "box">
+     
+      <Button href = "/quiz" variant="contained" style={{textAlign: "center"}}>Take Quiz</Button>
     </Box>
     </div>
     </Wrapper>
@@ -156,6 +153,13 @@ export default function Learn() {
 }
 
 const Wrapper = styled.article`
+.box{
+  display: flex,
+  border: 1px solid black,
+  justifyContent: center,
+  alignItems: center
+  padding: 8
+}
 .graphic{
   width: 100%;
   height: 500px;
@@ -179,5 +183,17 @@ display: inline;
   font-size: 18px;
   text-align: left;
   font-weight: normal;
+}
+.title2{
+  text-align: left;
+  font-size: 32px;
+  text-align: center;
+
+}
+.about2{
+  font-size: 18px;
+  text-align: left;
+  font-weight: normal;
+  text-align: center;
 }
 `;
