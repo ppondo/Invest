@@ -81,7 +81,7 @@
 .carousel .control-dots {
   padding-left: 5px !important;
   outline: 2 !important;
-  bottom: 30% !important;
+  bottom: 7% !important;
 }
 
 .myCarousel h3 {
@@ -174,4 +174,13 @@
     width: 24% !important;
     border-radius: 50%;
   }
+  
+div .review_testimonial {
+  text-align: center;
+}
+
+div .test_text {
+  text-align: center;
+  padding-left: 200px;
+  padding-right: 200px;
 }

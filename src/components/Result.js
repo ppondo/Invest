@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
+import {ResultContext} from "./ResultContext";
 
 export const Result = (props) => {
-  const [result, setResult] = React.useState(0);
+  // const [result, setResult] = React.useState(0);
+  const {score} = useContext(ResultContext)
+  const resultPercentage = (
+    score / 7
+  );
+  let resultStatement;
+  if (resultPercentage >= 6/7) {
+    resultStatement = " Super score! Well Done, You're practically an expert!!"
+  } else if (resultPercentage <= 3/7) {
+    resultStatement = " Keep studying up and you'll become a great investor soon!"
+  } else {
+    resultStatement = " You did well! You're well on your way to becoming an expert"
+  }
 
   return (
     <div>
-      <h1>You've got {result}%</h1>
-      <p>Result: Average, You did pretty well.</p>
+      <h1>Your Score: {Math.floor(resultPercentage * 100)}%</h1>
+      <p>{resultStatement}</p>
       <br />
       <a href="https://forms.gle/RwrKiBnofKtrAnfR7">
         Click here to take a survey with us

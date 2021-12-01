@@ -1,35 +1,51 @@
 import { Questions } from "../QuizModel";
-import React from "react";
+import React, { useContext, useState} from "react";
 import {useNavigate} from "react-router-dom";
+import { ResultContext } from "./ResultContext";
 
 export const QuizQuestion = (props) => {
-    const [currentPage, setCurrentPage] = React.useState(0);
-    const [result, setResult] = React.useState(0);
-    const [correct, setCorrect] = React.useState("");  
-    const [currentAnswer, setCurrentAnswer] = React.useState(null);
+    const [currentPage, setCurrentPage] = useState(0);
+    const [correct, setCorrect] = useState("");  
+    const [currentAnswer, setCurrentAnswer] = useState(null);
+    const [currentScore, setCurrentScore] = useState(0)
+    const [enabledCheck, setEnabledCheck] = useState(true)
+    const [enabledNext, setEnabledNext] = useState(true)
     const questions = Questions;
     const navigate = useNavigate();
+    const {updateScore} = useContext(ResultContext)
+
+    const handleChange = (e) => {
+        console.log(e.target.value);
+        setCurrentAnswer("z");
+        setCurrentAnswer(e.target.value);
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        setCurrentAnswer(e.target.answer.value)
-        if (e.target.answer.value === questions[currentPage].ans) {
+        setEnabledCheck(false)
+        if (currentAnswer === questions[currentPage].ans) {
+            setCurrentScore(currentScore + 1);
             setCorrect("Correct! Well Done!");
-            setResult(result + 1);
         } else {
             setCorrect(`Close! The correct answer is ${questions[currentPage].ans}`);
         }
-        setTimeout(2000);
-        if (currentPage === 6) {
-            navigate('/result')
-        }
+        console.log(e.target.elements[0].checked)
+        e.target.reset()
     }
 
     const handleNextQuestion = (e) => {
         e.preventDefault();
         setCurrentAnswer(null);
         setCorrect("");
-        setCurrentPage(currentPage + 1);
+        setEnabledCheck(true)
+        if (currentPage === 6) {
+            setEnabledCheck(false);
+            setEnabledNext(false);
+            updateScore(currentScore);
+            navigate('/result')
+        } else {
+            setCurrentPage(currentPage + 1);
+        }
     }
 
     const createInputs = () => {
@@ -37,25 +53,43 @@ export const QuizQuestion = (props) => {
         if (questions[currentPage].ansList.length === 2) {
             inputs = <div>
                         <input 
-                            type="radio" name="answer" value={questions[currentPage].ansList[0]}
+                            type="radio" 
+                            name={"answer" + currentPage}
+                            value={questions[currentPage].ansList[0]}
+                            onChange={handleChange}
                         />{questions[currentPage].ansList[0]}<br/>
                         <input 
-                            type="radio" name="answer" value={questions[currentPage].ansList[1]}
+                            type="radio" 
+                            name={"answer" + currentPage}
+                            value={questions[currentPage].ansList[1]}
+                            onChange={handleChange}
                         />{questions[currentPage].ansList[1]}
                     </div>
         } else {
             inputs = <div>
                         <input 
-                            type="radio" name="answer" value={questions[currentPage].ansList[0]}
+                            type="radio" 
+                            name={"answer" + currentPage}
+                            value={questions[currentPage].ansList[0]}
+                            onChange={handleChange}
                         />{questions[currentPage].ansList[0]}<br/>
                         <input 
-                            type="radio" name="answer" value={questions[currentPage].ansList[1]}
+                            type="radio" 
+                            name={"answer" + currentPage}
+                            value={questions[currentPage].ansList[1]}
+                            onChange={handleChange}
                         />{questions[currentPage].ansList[1]}<br/>
                         <input 
-                            type="radio" name="answer" value={questions[currentPage].ansList[2]}
+                            type="radio" 
+                            name={"answer" + currentPage}
+                            value={questions[currentPage].ansList[2]}
+                            onChange={handleChange}
                         />{questions[currentPage].ansList[2]}<br/>
                         <input 
-                            type="radio" name="answer" value={questions[currentPage].ansList[3]}
+                            type="radio" 
+                            name={"answer" + currentPage}
+                            value={questions[currentPage].ansList[3]}
+                            onChange={handleChange}
                         />{questions[currentPage].ansList[3]}
                     </div>
         }
@@ -64,14 +98,18 @@ export const QuizQuestion = (props) => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form id='question' onSubmit={handleSubmit}>
                 <h1>Question {currentPage + 1}</h1>
                 <h3>{questions[currentPage].question}</h3>
                 {createInputs()}
-                <button type="submit">Check Answer</button>
+                <button disabled={!enabledCheck} type="submit">
+                    Check Answer
+                </button>
             </form>
             <p>{correct}</p>
-            <button onClick={handleNextQuestion}>Next</button>
+            <button disabled={!enabledNext} onClick={handleNextQuestion}>
+                Next
+            </button>
         </div>
     );
 };
