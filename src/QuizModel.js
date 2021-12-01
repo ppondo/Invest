@@ -22,9 +22,9 @@ const Questions = [
     {
         question: "Mutual Funds, which are managed by professionals, are typically made up of what?",
         ansList: [
-            "Large or Mid-Cap Stocks",
-            "Bonds",
             "Options",
+            "Bonds",
+            "Large or Mid-Cap Stocks",
             "Risky Small-Cap Stocks"
         ],
        ans: "Large or Mid-Cap Stocks"
@@ -40,22 +40,20 @@ const Questions = [
             ans: "1%"
         },
     {
-        question: "(True/False) When money is put into you retirement plan, it is deducted before taxes.",
+        question: "(True/False) When money is put into you retirement plan, it is not deducted before taxes.",
             ansList: [
                 "True",
                 "False"
             ],
-           ans: "True"
+           ans: "False"
         },
     {
-        question: "A good investor knows that it is best to spread your money across numerous asset classes to limit risk, what is this concept called?",
+        question: "(True/False) More often than not, your broker will charge a commision for every trade you make.",
         ansList: [
-            "Simplification",
-            "Investing",
-            "Diversification",
-            "Day-Trading"
+            "True",
+            "False"
         ],
-       ans: "Diversification"
+       ans: "True"
     },
     
     {
