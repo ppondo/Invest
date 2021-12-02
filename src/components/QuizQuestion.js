@@ -2,6 +2,7 @@ import { Questions } from "../QuizModel";
 import React, { useContext, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import { ResultContext } from "./ResultContext";
+import { Grid, Box, Card, Button, CardContent, Typography } from '@mui/material';
 
 export const QuizQuestion = (props) => {
     const [currentPage, setCurrentPage] = useState(0);
@@ -51,7 +52,7 @@ export const QuizQuestion = (props) => {
     const createInputs = () => {
         let inputs;
         if (questions[currentPage].ansList.length === 2) {
-            inputs = <div>
+            inputs = <div className="inputs">
                         <input 
                             type="radio" 
                             name={"answer" + currentPage}
@@ -66,7 +67,7 @@ export const QuizQuestion = (props) => {
                         />{questions[currentPage].ansList[1]}
                     </div>
         } else {
-            inputs = <div>
+            inputs = <div  className="inputs">
                         <input 
                             type="radio" 
                             name={"answer" + currentPage}
@@ -95,21 +96,34 @@ export const QuizQuestion = (props) => {
         }
         return inputs
     }
+    let html = ""
+    if(correct==="Correct! Well Done!"){
+        html = <p className="success">{correct}</p>
+    } else {
+        html = <p className = "error">{correct}</p>
+    }
 
     return (
-        <div>
-            <form id='question' onSubmit={handleSubmit}>
-                <h1>Question {currentPage + 1}</h1>
+        <Box sx={{ mt: 7, ml:7, mb: 10}} justifyContent="center" style={{display:'flex', justifyContent:'center', alignItems:"center"}}>
+       
+<Card sx={{ width: 900, height: 450 }}  variant="outlined" style={{ backgroundColor: "rgba(234, 252, 252, 1)"}}>
+      <CardContent>
+                <form id='question' onSubmit={handleSubmit}>
+                <h1 className = "question">Question {currentPage + 1}</h1>
                 <h3>{questions[currentPage].question}</h3>
                 {createInputs()}
-                <button disabled={!enabledCheck} type="submit">
+                <Button variant="contained" disabled={!enabledCheck} type="submit">
                     Check Answer
-                </button>
+                </Button>
             </form>
-            <p>{correct}</p>
-            <button disabled={!enabledNext} onClick={handleNextQuestion}>
+            {html}
+            <Box sx={{ mt: 7, mr:7, mb: 10}} justifyContent="right" style={{display:'flex', justifyContent:'right', alignItems:"right"}}>
+            <Button variant="contained" disabled={!enabledNext} onClick={handleNextQuestion}>
                 Next
-            </button>
-        </div>
+            </Button>
+            </Box>
+        </CardContent>
+        </Card> 
+    </Box>
     );
 };
