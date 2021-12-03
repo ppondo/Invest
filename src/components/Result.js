@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import {ResultContext} from "./ResultContext";
-import image from "../images/flat-bravo-hands-clapping-vector.jpg"
+import image from "../images/moneytree.jpg"
 import image2 from "../images/study.jpg"
-import image3 from "../images/nicejob.png"
+import image3 from "../images/nicejob.jpg"
 import { Link, Box, Card, Button, CardContent, Typography } from '@mui/material';
 
 export const Result = (props) => {
@@ -17,7 +17,7 @@ export const Result = (props) => {
     <>
       <p className = "success2">Super score! Well Done, You're practically an expert!!</p>
       <div className = "image">
-        <img src = {image} className = "success-image"></img>
+        <img src = {image3} className = "success-image"></img>
       </div>
    </>
   } else if (resultPercentage <= 3/7) {
@@ -33,7 +33,7 @@ export const Result = (props) => {
     <>
     <p className = "success2">You did well! You're well on your way to becoming an expert</p>
       <div className = "image">
-        <img src = {image3} className = "success-image"></img>
+        <img src = {image} className = "success-image"></img>
       </div>
     </>
   }
