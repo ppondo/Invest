@@ -16,7 +16,6 @@ export const QuizQuestion = (props) => {
     const {updateScore} = useContext(ResultContext)
 
     const handleChange = (e) => {
-        console.log(e.ta);
         setCurrentAnswer(e.target.value);
     }
 
@@ -30,6 +29,7 @@ export const QuizQuestion = (props) => {
         } else {
             setCorrect(`Close! The correct answer is ${questions[currentPage].ans}`);
         }
+        document.getElementById('question' + currentPage).disabled = true;
     }
 
     const handleNextQuestion = (e) => {
