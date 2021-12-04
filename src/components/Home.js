@@ -32,6 +32,7 @@ function Home() {
   );
 }
 const Wrapper = styled.article`
+  margin-top: 20px;
   .graphic {
     width: 100%;
     height: 500px;
