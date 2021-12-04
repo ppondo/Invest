@@ -23,8 +23,37 @@ export const QuizQuestion = (props) => {
   const { updateScore } = useContext(ResultContext);
 
   const handleChange = (e) => {
-    console.log(e.ta);
     setCurrentAnswer(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setEnabledCheck(false);
+    setEnabledNext(true);
+    if (currentAnswer === questions[currentPage].ans) {
+      setCurrentScore(currentScore + 1);
+      setCorrect("Correct! Well Done!");
+    } else {
+      setCorrect(`Close! The correct answer is ${questions[currentPage].ans}`);
+    }
+    document.getElementById("question" + currentPage).disabled = true;
+  };
+
+  const handleNextQuestion = (e) => {
+    e.preventDefault();
+    setCurrentAnswer("");
+    setCorrect("");
+    setEnabledCheck(true);
+    setEnabledNext(false);
+    document.getElementById("question" + currentPage).reset();
+    if (currentPage === 6) {
+      setEnabledCheck(false);
+      setEnabledNext(false);
+      updateScore(currentScore);
+      navigate("/result");
+    } else {
+      setCurrentPage(currentPage + 1);
+    }
   };
 
   const handleSubmit = (e) => {
