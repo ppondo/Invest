@@ -99,11 +99,10 @@
   margin-top: 0;
   padding-top: 0;
   font-weight: 500;
-  color: #787878;
+  color: #737373;
   font-size: 14px;
 }
-
-.myCarousel p {
+s .myCarousel p {
   font-weight: 100 !important;
   line-height: 29px !important;
   color: #222;
@@ -189,43 +188,40 @@ div .test_text {
 
 .inputs {
   margin-left: 2%;
-  margin-bottom: 3%
+  margin-bottom: 3%;
 }
 
-.quiz{
+.quiz {
   margin-left: 4%;
 }
 
-.question{
+.question {
   color: #1976d2;
   font-weight: bold;
 }
 
-#question{
-  margin-left: 6%
+#question {
+  margin-left: 6%;
 }
 
-.success{
+.success {
   margin-left: 6%;
   font-weight: bold;
-  color: green
-}
-
-.error{
-  margin-left: 6%;
-  font-weight: bold;
-  color: red
-}
-
-.success2{
   color: green;
-
 }
 
-.error2{
-
+.error {
+  margin-left: 6%;
+  font-weight: bold;
   color: red;
+}
 
+.success2 {
+  color: green;
+}
+
+.error2 {
+  color: #ee0000;
 }
 
 .results {
@@ -235,12 +231,12 @@ div .test_text {
   margin-right: 7%;
 }
 
-.success-image{
+.success-image {
   width: 400px;
   height: 400px;
 }
 
-.link{
+.link {
   text-align: center;
   margin-bottom: 2%;
 }
