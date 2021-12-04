@@ -56,35 +56,6 @@ export const QuizQuestion = (props) => {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setEnabledCheck(false);
-    setEnabledNext(true);
-    if (currentAnswer === questions[currentPage].ans) {
-      setCurrentScore(currentScore + 1);
-      setCorrect("Correct! Well Done!");
-    } else {
-      setCorrect(`Close! The correct answer is ${questions[currentPage].ans}`);
-    }
-  };
-
-  const handleNextQuestion = (e) => {
-    e.preventDefault();
-    setCurrentAnswer("");
-    setCorrect("");
-    setEnabledCheck(true);
-    setEnabledNext(false);
-    document.getElementById("question" + currentPage).reset();
-    if (currentPage === 6) {
-      setEnabledCheck(false);
-      setEnabledNext(false);
-      updateScore(currentScore);
-      navigate("/result");
-    } else {
-      setCurrentPage(currentPage + 1);
-    }
-  };
-
   const createInputs = () => {
     let inputs;
     if (questions[currentPage].ansList.length === 2) {
