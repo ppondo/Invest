@@ -4,6 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import erika from "../images/stockPhotos/erika.jpg";
 import chris from "../images/stockPhotos/chris.jpg";
 import mike from "../images/stockPhotos/mike.jpg";
+import ashley from "../images/stockPhotos/ashley.jpg"
 
 export default class Testimonials extends Component {
   render() {
@@ -55,6 +56,20 @@ export default class Testimonials extends Component {
               first full time job. I liked how it was catered towards people my
               age and is very college oriented. I also learned how to be a good
               investor and save for my retirement.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <img src={ashley} alt="Ashley" />
+          <div className="myCarousel">
+            <h3>Ashley</h3>
+            <h4>20</h4>
+            <p>
+              I'm in college and I recently saw a lot of online talk and 
+              social media buzz around investing and the stock markey. Invest was able 
+              to teach me about the ins and outs of how to properly invest my money. The quiz 
+              that they offer really helped me to remember important topics and some smart tips. 
             </p>
           </div>
         </div>

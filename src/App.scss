@@ -44,6 +44,7 @@
 .header {
   font-weight: bold;
 }
+
 /* css for testimonials */
 
 .carousel-root {
@@ -61,11 +62,13 @@
 
 .carousel .slide img {
   width: 139px !important;
+  border: 2px solid #14379E;
   border-radius: 50%;
+ 
 }
 
 .myCarousel {
-  background: #fafafa;
+  background: #F1F5FF;
   margin-top: -6%;
   width: 54%;
   margin-left: auto;
@@ -74,7 +77,7 @@
   padding-bottom: 8%;
   padding-left: 5%;
   padding-right: 5%;
-  border: 2px solid #ddd;
+  border: 2px solid #14379E;
   height: 286px;
 }
 
@@ -113,7 +116,7 @@ s .myCarousel p {
 
 .myCarousel p:before {
   content: "“";
-  color: #aaa;
+  color: black; 
   font-size: 26px;
   font-family: monospace;
   font-weight: 100;
@@ -121,7 +124,7 @@ s .myCarousel p {
 
 .myCarousel p:after {
   content: "”";
-  color: #aaa;
+  color: black; 
   font-size: 26px;
   font-family: monospace;
   font-weight: 100;
@@ -135,10 +138,11 @@ s .myCarousel p {
 }
 
 .carousel.carousel-slider .control-arrow {
-  background: #000 !important;
-  height: 50px !important;
-  position: absolute;
-  top: 35% !important;
+  background: #395eca!important;
+  height: 100px !important;
+  width: 50px;
+  position: relative; 
+  top: 25% !important;
 }
 
 .App {
@@ -171,6 +175,7 @@ s .myCarousel p {
 
   .carousel .slide img {
     width: 24% !important;
+    border: 2px solid #14379E;
     border-radius: 50%;
   }
 }
@@ -186,6 +191,8 @@ div .test_text {
   padding-right: 200px;
 }
 
+
+// css for quiz 
 .inputs {
   margin-left: 2%;
   margin-bottom: 3%;
