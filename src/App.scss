@@ -205,13 +205,11 @@ div .test_text {
 }
 
 .success {
-  margin-left: 6%;
   font-weight: bold;
   color: green;
 }
 
 .error {
-  margin-left: 6%;
   font-weight: bold;
   color: red;
 }
@@ -239,4 +237,15 @@ div .test_text {
 .link {
   text-align: center;
   margin-bottom: 2%;
+}
+
+.instruction {
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
 }
