@@ -5,11 +5,7 @@ import image2 from "../images/study.jpg";
 import image3 from "../images/nicejob.jpg";
 import {
   Link,
-  Box,
-  Card,
-  Button,
-  CardContent,
-  Typography,
+  Button
 } from "@mui/material";
 
 export const Result = (props) => {
@@ -61,6 +57,14 @@ export const Result = (props) => {
     <div className="results">
       <h1>Your Score: {Math.floor(resultPercentage * 100)}%</h1>
       {resultStatement}
+      <Button
+            href="/quiz"
+            variant="contained"
+            style={{ textAlign: "center" }}
+            sx={{mb: 4}}
+          >
+            Take Quiz Again
+      </Button>
       <p>
         Thank you for taking our quiz and visiting our site! We hope you learned
         something new about investing in the stock market.

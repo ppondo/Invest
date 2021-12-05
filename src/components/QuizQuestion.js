@@ -144,6 +144,9 @@ export const QuizQuestion = (props) => {
   }
 
   return (
+    <>
+    <h1 className="center"> Quiz </h1>
+    <p className="instruction">Welcome to the Invest quiz! Test your knowledge on the material we provided on our main page. Click check answer to see if your selction is correct, before proceding to the next question. You will be able to retake the quiz as many times as you want. Enjoy!</p>
     <Box
       sx={{ mt: 7, ml: 7, mb: 10 }}
       justifyContent="center"
@@ -154,7 +157,7 @@ export const QuizQuestion = (props) => {
       }}
     >
       <Card
-        sx={{ width: 900, height: 450 }}
+        sx={{ width: 900, height: 500}}
         variant="outlined"
         style={{ backgroundColor: "rgba(234, 252, 252, 1)" }}
       >
@@ -181,5 +184,6 @@ export const QuizQuestion = (props) => {
         </CardContent>
       </Card>
     </Box>
+    </>
   );
 };
