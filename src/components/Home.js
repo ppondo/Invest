@@ -11,7 +11,7 @@ function Home() {
       <Grid item xs={4}>
         <div className="container">
         <h1 className = "title">How to Invest</h1>
-        <p className = "about">Investing in the stock market is easier than beginners might think - all you need is an online brokerage account to get started.</p>
+        <p className = "about">It has never been easier to start investing in the stock market. To get started, all you need is a brokerage account. </p>
         <Button variant="contained" href = '#Learn'>Learn More</Button>
         </div>
       </Grid>
