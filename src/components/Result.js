@@ -1,49 +1,79 @@
 import React, { useContext } from "react";
-import {ResultContext} from "./ResultContext";
-import image from "../images/moneytree.jpg"
-import image2 from "../images/study.jpg"
-import image3 from "../images/nicejob.jpg"
-import { Link, Box, Card, Button, CardContent, Typography } from '@mui/material';
+import { ResultContext } from "./ResultContext";
+import image from "../images/moneytree.jpg";
+import image2 from "../images/study.jpg";
+import image3 from "../images/nicejob.jpg";
+import {
+  Link,
+  Button
+} from "@mui/material";
 
 export const Result = (props) => {
   // const [result, setResult] = React.useState(0);
-  const {score} = useContext(ResultContext)
-  const resultPercentage = (
-    score / 7
-  );
-  let resultStatement = ""
-  if (resultPercentage >= 6/7) {
-    resultStatement = 
-    <>
-      <p className = "success2">Super score! Well Done, You're practically an expert!!</p>
-      <div className = "image">
-        <img src = {image3} className = "success-image"></img>
-      </div>
-   </>
-  } else if (resultPercentage <= 3/7) {
-    resultStatement =
-    <>
-      <p className = "error2">Keep studying up and you'll become a great investor soon!</p>    
-      <div className = "image">
-        <img src = {image2} className = "success-image"></img>
-      </div>
-    </>
+  const { score } = useContext(ResultContext);
+  const resultPercentage = score / 7;
+  let resultStatement = "";
+  if (resultPercentage >= 6 / 7) {
+    resultStatement = (
+      <>
+        <p className="success2">
+          Super score! Well Done, You're practically an expert!!
+        </p>
+        <div className="image">
+          <img src={image3} alt="Super score" className="success-image"></img>
+        </div>
+      </>
+    );
+  } else if (resultPercentage <= 3 / 7) {
+    resultStatement = (
+      <>
+        <p className="error2">
+          Keep studying up and you'll become a great investor soon!
+        </p>
+        <div className="image">
+          <img
+            src={image2}
+            alt="Keep studying up"
+            alt="Results"
+            className="success-image"
+          ></img>
+        </div>
+      </>
+    );
   } else {
-    resultStatement = 
-    <>
-    <p className = "success2">You did well! You're well on your way to becoming an expert</p>
-      <div className = "image">
-        <img src = {image} className = "success-image"></img>
-      </div>
-    </>
+    resultStatement = (
+      <>
+        <p className="success2">
+          You did well! You're well on your way to becoming an expert
+        </p>
+        <div className="image">
+          <img src={image} alt="Well done" className="success-image"></img>
+        </div>
+      </>
+    );
   }
 
   return (
-    <div className = "results">
+    <div className="results">
       <h1>Your Score: {Math.floor(resultPercentage * 100)}%</h1>
       {resultStatement}
-      <p>Thank you for taking our quiz and visiting our site! We hope you learned something new about investing in the stock market.</p>
-      <Link mb={10} style={{fontWeight:"bold"}}  href="https://forms.gle/RwrKiBnofKtrAnfR7">
+      <Button
+            href="/quiz"
+            variant="contained"
+            style={{ textAlign: "center" }}
+            sx={{mb: 4}}
+          >
+            Take Quiz Again
+      </Button>
+      <p>
+        Thank you for taking our quiz and visiting our site! We hope you learned
+        something new about investing in the stock market.
+      </p>
+      <Link
+        mb={10}
+        style={{ fontWeight: "bold" }}
+        href="https://forms.gle/RwrKiBnofKtrAnfR7"
+      >
         Click here to give us a review
       </Link>
       {/* <h2>Generation wise investment</h2>

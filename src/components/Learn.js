@@ -1,10 +1,17 @@
-import React from 'react'
-import { Grid, Box, Card, Button, CardContent, Typography } from '@mui/material';
-import image from "../images/Presentation_1.jpg"
-import image2 from "../images/robo.jpg"
-import image3 from"../images/money.jpg"
-import image4 from "../images/retire.jpg"
-import image5 from "../images/diverse.jpg"
+import React from "react";
+import {
+  Grid,
+  Box,
+  Card,
+  Button,
+  CardContent,
+  Typography,
+} from "@mui/material";
+import image from "../images/Presentation_1.jpg";
+import image2 from "../images/robo.jpg";
+import image3 from "../images/Finance.png";
+import image4 from "../images/retire.jpg";
+import image5 from "../images/diverse.jpg";
 import styled from "styled-components";
 
 export default function Learn() {
@@ -149,7 +156,7 @@ export default function Learn() {
     </Box>
     </div>
     </Wrapper>
-  )
+  );
 }
 
 const Wrapper = styled.article`
