@@ -106,6 +106,7 @@ export const QuizQuestion = (props) => {
             name={"answer" + currentPage}
             value={questions[currentPage].ansList[2]}
             onChange={handleChange}
+            onClick={handleChange}
           />
           {questions[currentPage].ansList[2]}
           <br />
@@ -114,6 +115,7 @@ export const QuizQuestion = (props) => {
             name={"answer" + currentPage}
             value={questions[currentPage].ansList[3]}
             onChange={handleChange}
+            onClick={handleChange}
           />
           {questions[currentPage].ansList[3]}
         </div>
